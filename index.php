@@ -5,15 +5,7 @@ require 'vendor/autoload.php';
 use Animal\Dog;
 use Animal\Cat;
 
-function getUserInput($prompt) {
-    echo $prompt;
-    $handle = fopen("php://stdin", "r");
-    $input = trim(fgets($handle));
-    fclose($handle);
-    return $input;
-}
-
-$animalType = getUserInput("Выберите животное (dog/cat): ");
+$animalType = readline("Выберите животное (dog/cat): ");
 
 $animal = null;
 if ($animalType === "dog") {
@@ -25,9 +17,4 @@ if ($animalType === "dog") {
     exit; 
 }
 
-$userInput = getUserInput("Введите данные для обработки: ");
-
-$processedData = $animal->processInput($userInput);
-
-echo "Обработанные данные: " . $processedData . "\n";
 echo $animal->getInfo() . "\n";
