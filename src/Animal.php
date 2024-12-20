@@ -2,20 +2,19 @@
 
 namespace Animal;
 
-abstract class Animal {
-    abstract public function makeSound();
+abstract class Animal
+{
+    abstract public function makeSound(): string;
 
-    public function getType() {
-        return get_class($this); 
+    public function getType(): string
+    {
+        return get_class($this);
     }
 
-    public function getInfo() {
+    public function getInfo(): string
+    {
         return $this->getType() . ": " . $this->makeSound();
     }
 
     abstract public function processInput($input);
 }
-
-
-
-

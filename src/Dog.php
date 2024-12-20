@@ -2,17 +2,22 @@
 
 namespace Animal;
 
-class Dog extends Animal {
-    public function makeSound() {
+class Dog extends Animal 
+{
+    public function makeSound(): string
+    {
         return "Гав";
     }
 
-    public function getType() {
+    public function getType(): string 
+    {
         return "Млекопитающее";
     }
 
-    public function processInput($input) {
-        if (is_numeric($input)) {
+    public function processInput($input): string 
+    {
+        if (is_numeric($input)) 
+        {
             return (int)$input;
         }
         return (string)$input;
