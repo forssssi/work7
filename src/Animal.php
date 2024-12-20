@@ -15,6 +15,4 @@ abstract class Animal
     {
         return $this->getType() . ": " . $this->makeSound();
     }
-
-    abstract public function processInput($input);
 }
