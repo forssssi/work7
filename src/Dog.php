@@ -13,13 +13,4 @@ class Dog extends Animal
     {
         return "Млекопитающее";
     }
-
-    public function processInput($input): string 
-    {
-        if (is_numeric($input)) 
-        {
-            return (int)$input;
-        }
-        return (string)$input;
-    }
 }
