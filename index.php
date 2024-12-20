@@ -11,11 +11,11 @@ $animal = null;
 
 if ($animalType === "dog") {
     $animal = new Dog();
-}   elseif ($animalType === "cat") {
+} elseif ($animalType === "cat") {
     $animal = new Cat();
-}   else {
+} else {
     echo "Неизвестное животное!\n";
-    exit; 
+    exit;
 }
 
 echo $animal->getInfo() . "\n";
